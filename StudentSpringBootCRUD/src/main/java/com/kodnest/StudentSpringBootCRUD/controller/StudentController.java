@@ -40,4 +40,9 @@ public class StudentController {
         studService.deleteStudent(roll);
         return "Student is DELETED";
     }
+
+    @GetMapping("/getemail/{email}")
+    public Student getStudentByEmail(@PathVariable String email) {
+        return studService.getStudentByEmail(email);
+    }
 }
